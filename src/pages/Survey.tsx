@@ -70,23 +70,23 @@ export default function Survey() {
       <PageLayout>
         <div className="max-w-2xl mx-auto text-center py-16">
           <div className="text-5xl mb-6">✓</div>
-          <h1 className="text-3xl font-bold text-neutral-900 mb-4">Спасибо за участие!</h1>
-          <p className="text-lg text-neutral-600 mb-8">
+          <h1 className="text-3xl font-bold text-foreground mb-4">Спасибо за участие!</h1>
+          <p className="text-lg text-foreground/70 mb-8">
             Ваши ответы сохранены. Этот опрос не имеет правильных ответов —
             он помогает задуматься о том, как вы принимаете решения на стыке права и морали.
           </p>
-          <div className="bg-neutral-50 border border-neutral-200 rounded-sm p-6 text-left mb-8">
-            <h2 className="text-sm uppercase tracking-widest text-neutral-400 mb-4">Ваши ответы</h2>
+          <div className="bg-card border border-border rounded-sm p-6 text-left mb-8">
+            <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-4">Ваши ответы</h2>
             {questions.map((q) => (
               <div key={q.id} className="mb-4 last:mb-0">
-                <p className="text-sm font-semibold text-neutral-700 mb-1">{q.text}</p>
-                <p className="text-sm text-neutral-500">→ {answers[q.id]}</p>
+                <p className="text-sm font-semibold text-foreground mb-1">{q.text}</p>
+                <p className="text-sm text-muted-foreground">→ {answers[q.id]}</p>
               </div>
             ))}
           </div>
           <button
             onClick={() => { setSubmitted(false); setAnswers({}); }}
-            className="bg-black text-white px-6 py-3 text-sm uppercase tracking-wide hover:bg-neutral-800 transition-colors duration-200"
+            className="bg-foreground text-background px-6 py-3 text-sm uppercase tracking-wide hover:opacity-80 transition-opacity duration-200"
           >
             Пройти ещё раз
           </button>
@@ -98,11 +98,11 @@ export default function Survey() {
   return (
     <PageLayout>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">Мини-опрос</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-6">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Мини-опрос</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
           Как вы принимаете решения?
         </h1>
-        <p className="text-lg text-neutral-600 leading-relaxed mb-10">
+        <p className="text-lg text-foreground/70 leading-relaxed mb-10">
           Четыре вопроса о том, как вы действуете, когда право и мораль расходятся.
           Правильных ответов нет — есть только ваши.
         </p>
@@ -110,11 +110,11 @@ export default function Survey() {
 
       <div className="flex flex-col gap-8 max-w-3xl">
         {questions.map((question) => (
-          <div key={question.id} className="border border-neutral-200 rounded-sm p-6">
-            <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">
+          <div key={question.id} className="border border-border rounded-sm p-6">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
               Вопрос {question.id} из {questions.length}
             </p>
-            <p className="text-base md:text-lg font-semibold text-neutral-900 mb-5">
+            <p className="text-base md:text-lg font-semibold text-foreground mb-5">
               {question.text}
             </p>
             <div className="flex flex-col gap-3">
@@ -124,8 +124,8 @@ export default function Survey() {
                   onClick={() => handleSelect(question.id, option)}
                   className={`text-left px-4 py-3 border text-sm transition-all duration-200 rounded-sm ${
                     answers[question.id] === option
-                      ? "border-neutral-900 bg-neutral-900 text-white"
-                      : "border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400"
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border bg-card text-foreground hover:border-muted-foreground"
                   }`}
                 >
                   {option}
@@ -140,8 +140,8 @@ export default function Survey() {
           disabled={!allAnswered}
           className={`mt-2 px-8 py-4 text-sm uppercase tracking-widest font-semibold transition-all duration-200 ${
             allAnswered
-              ? "bg-black text-white hover:bg-neutral-800 cursor-pointer"
-              : "bg-neutral-200 text-neutral-400 cursor-not-allowed"
+              ? "bg-foreground text-background hover:opacity-80 cursor-pointer"
+              : "bg-muted text-muted-foreground cursor-not-allowed"
           }`}
         >
           {allAnswered ? "Отправить ответы" : `Ответьте на все вопросы (${Object.keys(answers).length}/${questions.length})`}

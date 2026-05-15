@@ -44,16 +44,16 @@ export default function Choice() {
   return (
     <PageLayout>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">Раздел IV</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-6">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел IV</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
           Как сделать выбор
         </h1>
-        <p className="text-lg text-neutral-600 leading-relaxed mb-4">
+        <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Когда право и мораль расходятся, человек остаётся наедине с собой.
           Универсального алгоритма нет — но есть шаги, которые помогают думать яснее
           и действовать честнее.
         </p>
-        <p className="text-base text-neutral-500 leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           Четыре практических шага для принятия морально трудного решения.
           Нажмите на каждый, чтобы прочитать подробнее.
         </p>

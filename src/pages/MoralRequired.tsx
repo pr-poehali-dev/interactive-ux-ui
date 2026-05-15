@@ -35,16 +35,16 @@ export default function MoralRequired() {
   return (
     <PageLayout>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">Раздел II</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-6">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел II</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
           Что мораль требует, а закон не обязывает
         </h1>
-        <p className="text-lg text-neutral-600 leading-relaxed mb-4">
+        <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Если бы все поступали только так, как требует закон — общество деградировало бы.
           Именно мораль заполняет пространство, где право молчит: она требует помощи,
           честности и ответственности там, где нет ни статьи, ни санкции.
         </p>
-        <p className="text-base text-neutral-500 leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           Три ситуации, где мораль идёт дальше закона.
           Нажмите на пример, чтобы узнать подробнее.
         </p>

@@ -35,16 +35,16 @@ export default function Conscience() {
   return (
     <PageLayout>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">Раздел III</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-6">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел III</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
           Когда закон можно нарушить по совести
         </h1>
-        <p className="text-lg text-neutral-600 leading-relaxed mb-4">
+        <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Существуют ситуации, когда подчинение закону само по себе становится безнравственным.
           История знает немало случаев, когда нарушители закона оказывались на стороне справедливости —
           а их судьи — нет.
         </p>
-        <p className="text-base text-neutral-500 leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           Это не призыв нарушать законы. Это приглашение думать о том, откуда берётся
           обязательная сила права — и когда она ослабевает. Нажмите на пример, чтобы прочитать.
         </p>

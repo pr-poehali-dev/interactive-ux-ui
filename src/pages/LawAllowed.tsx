@@ -35,16 +35,16 @@ export default function LawAllowed() {
   return (
     <PageLayout>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3">Раздел I</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-6">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел I</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
           Что закон разрешает, но мораль осуждает
         </h1>
-        <p className="text-lg text-neutral-600 leading-relaxed mb-4">
+        <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Закон — это минимум правил, необходимых для совместного существования. Но минимум — не предел.
           Многие поступки остаются в рамках закона, однако вызывают моральное осуждение со стороны
           общества, близких или собственной совести.
         </p>
-        <p className="text-base text-neutral-500 leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           Ниже — три примера ситуаций, где закон молчит, а мораль говорит громко.
           Нажмите на любой пример, чтобы развернуть его.
         </p>
