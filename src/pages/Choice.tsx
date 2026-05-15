@@ -42,14 +42,30 @@ const articles = [
   },
 ];
 
+const SEA_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/be3f7ade-c4b7-434c-9a9d-19707c30acd5.jpg";
+const PATTERN_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/e93ab21b-c4b5-4b5e-a9d5-10ee1942b50b.jpg";
+
 export default function Choice() {
   return (
     <PageLayout>
+      {/* Баннер с морем */}
+      <div className="relative overflow-hidden rounded-sm mb-10">
+        <img src={SEA_IMG} alt="Спокойное море" className="w-full h-48 md:h-64 object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-center px-8">
+          <p className="text-xs uppercase tracking-widest text-white/70 mb-2">Раздел IV</p>
+          <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+            Как сделать выбор
+          </h1>
+        </div>
+        {/* Узор в углу */}
+        <div
+          className="absolute top-0 right-0 w-40 h-40 opacity-20 pointer-events-none"
+          style={{ backgroundImage: `url(${PATTERN_IMG})`, backgroundSize: "cover" }}
+        />
+      </div>
+
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел IV</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-          Как сделать выбор
-        </h1>
         <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Когда право и мораль расходятся, человек остаётся наедине с собой.
           Универсального алгоритма нет — но есть способы думать яснее и действовать честнее.

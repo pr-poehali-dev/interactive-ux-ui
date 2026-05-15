@@ -64,8 +64,17 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
         )}
       </header>
       <main className="max-w-5xl mx-auto px-6 py-12">{children}</main>
-      <footer className="border-t border-border mt-16">
-        <div className="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center text-sm text-muted-foreground">
+      <footer className="border-t border-border mt-16 relative overflow-hidden">
+        {/* Декоративный узор в футере */}
+        <div
+          className="absolute inset-0 opacity-[0.07] pointer-events-none"
+          style={{
+            backgroundImage: `url(https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/e93ab21b-c4b5-4b5e-a9d5-10ee1942b50b.jpg)`,
+            backgroundSize: "300px",
+            backgroundRepeat: "repeat",
+          }}
+        />
+        <div className="relative max-w-5xl mx-auto px-6 py-8 flex justify-between items-center text-sm text-muted-foreground">
           <span className="uppercase tracking-widest font-bold text-foreground">Lex & Mos</span>
           <span>{new Date().getFullYear()} — Право и мораль в аспекте возможного</span>
         </div>

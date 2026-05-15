@@ -110,6 +110,9 @@ const questions: Question[] = [
   },
 ];
 
+const LIBRARY_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/e18b2f90-3d61-4b7f-82f3-24f7c633f032.jpg";
+const PATTERN_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/e93ab21b-c4b5-4b5e-a9d5-10ee1942b50b.jpg";
+
 export default function Survey() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -157,14 +160,24 @@ export default function Survey() {
 
   return (
     <PageLayout>
+      <div className="relative overflow-hidden rounded-sm mb-10">
+        <img src={LIBRARY_IMG} alt="Уютная библиотека" className="w-full h-48 md:h-64 object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent" />
+        <div
+          className="absolute top-0 right-0 w-40 h-full opacity-20 pointer-events-none"
+          style={{ backgroundImage: `url(${PATTERN_IMG})`, backgroundSize: "cover" }}
+        />
+        <div className="absolute inset-0 flex flex-col justify-center px-8">
+          <p className="text-xs uppercase tracking-widest text-white/70 mb-2">Мини-опрос</p>
+          <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+            Как ты принимаешь решения?
+          </h1>
+        </div>
+      </div>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Мини-опрос</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-          Как вы принимаете решения?
-        </h1>
         <p className="text-lg text-foreground/70 leading-relaxed mb-10">
-          Четыре вопроса о том, как вы действуете, когда право и мораль расходятся.
-          Правильных ответов нет — есть только ваши.
+          Десять вопросов о том, как ты действуешь, когда право и мораль расходятся.
+          Правильных ответов нет — есть только твои.
         </p>
       </div>
 

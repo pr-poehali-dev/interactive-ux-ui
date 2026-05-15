@@ -37,14 +37,28 @@ const articles = [
   },
 ];
 
+const BLONDE_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/50c0df7b-d9bd-48be-a90d-00a19b94b306.jpg";
+const PATTERN_IMG = "https://cdn.poehali.dev/projects/d025cd0a-d46e-49be-9499-9ed6cb03d959/files/e93ab21b-c4b5-4b5e-a9d5-10ee1942b50b.jpg";
+
 export default function LawAllowed() {
   return (
     <PageLayout>
+      <div className="relative overflow-hidden rounded-sm mb-10">
+        <img src={BLONDE_IMG} alt="Девушка с книгой о праве" className="w-full h-48 md:h-64 object-cover object-top" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent" />
+        <div
+          className="absolute top-0 right-0 w-40 h-full opacity-20 pointer-events-none"
+          style={{ backgroundImage: `url(${PATTERN_IMG})`, backgroundSize: "cover" }}
+        />
+        <div className="absolute inset-0 flex flex-col justify-center px-8">
+          <p className="text-xs uppercase tracking-widest text-white/70 mb-2">Раздел I</p>
+          <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+            Что закон разрешает,<br />но мораль осуждает
+          </h1>
+        </div>
+      </div>
       <div className="max-w-3xl">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Раздел I</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-          Что закон разрешает, но мораль осуждает
-        </h1>
+        <h1 className="sr-only">Что закон разрешает, но мораль осуждает</h1>
         <p className="text-lg text-foreground/70 leading-relaxed mb-4">
           Закон — это минимум правил, без которых общество не может существовать. Но минимум — не предел.
           Многие поступки остаются в рамках закона, однако причиняют реальный вред людям
